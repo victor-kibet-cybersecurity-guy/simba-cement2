@@ -1,0 +1,15 @@
+{
+  "name": "simba-cement-kenya",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "node build.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "compression": "^1.8.1",
+    "esbuild": "^0.28.2",
+    "express": "^4.21.2"
+  }
+}

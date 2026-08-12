@@ -1,0 +1,6 @@
+{
+  "name": "Simba Cement Manufacturers & Suppliers",
+  "description": "Simba Cement Kenya - Official manufacturers and suppliers for KEBS-certified 32.5R PPC and 42.5N OPC cement in Kenya.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
