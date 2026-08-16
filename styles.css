@@ -100,7 +100,7 @@ html:not([data-theme="dark"]) .theme-toggle .moon-icon{display:block}
 .breadcrumb, .breadcrumb-nav, .article-breadcrumb, .blog-breadcrumb{padding:.65rem 0;background:var(--sand);border-bottom:1px solid var(--line);font-size:.85rem;color:var(--ink-2)}
 .breadcrumb ol, .breadcrumb-nav ol, .breadcrumb-list{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;list-style:none;padding:0;margin:0}
 .breadcrumb li, .breadcrumb-item{display:inline-flex;align-items:center;gap:.4rem}
-.breadcrumb li+li::before, .breadcrumb-item+.breadcrumb-item::before, .article-breadcrumb .wrap > a + a::before{content:"›";color:var(--ink-2);font-weight:700;font-size:.9rem;opacity:.65;margin-right:.2rem}
+.breadcrumb li+li::before, .breadcrumb-item+.breadcrumb-item::before, .article-breadcrumb .wrap > a + a::before{content:"â€º";color:var(--ink-2);font-weight:700;font-size:.9rem;opacity:.65;margin-right:.2rem}
 .breadcrumb a, .breadcrumb-nav a, .article-breadcrumb a, .blog-breadcrumb a{color:var(--amber-dark);text-decoration:none;font-weight:600;transition:color .2s ease}
 .breadcrumb a:hover, .breadcrumb-nav a:hover, .article-breadcrumb a:hover, .blog-breadcrumb a:hover{text-decoration:underline;color:var(--ink)}
 .breadcrumb li:last-child, .breadcrumb-item.active{color:var(--ink);font-weight:700}
@@ -218,7 +218,7 @@ details[open]{border-color:var(--amber);box-shadow:0 4px 12px rgba(0,0,0,.05)}
 summary{cursor:pointer;font-weight:700;font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:1.3rem;color:var(--amber-dark);font-weight:800}
-details[open] summary::after{content:"−"}
+details[open] summary::after{content:"âˆ’"}
 
 /* Modal Overlay */
 .modal-overlay{position:fixed;inset:0;background:rgba(15,23,42,.75);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);z-index:99;display:grid;place-items:center;padding:1rem;opacity:0;pointer-events:none;transition:opacity .25s ease}
@@ -347,5 +347,30 @@ a,button,.btn{touch-action:manipulation}
     animation-duration:.01ms!important;
     animation-iteration-count:1!important;
     transition-duration:.01ms!important
+  }
+}
+
+/* Simba image placement */
+.brand-mark.brand-mark-image{
+  width:72px;
+  height:48px;
+  border-radius:8px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+}
+.brand-mark.brand-mark-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+@media (max-width:768px){
+  .brand-mark.brand-mark-image{
+    width:58px;
+    height:40px;
   }
 }

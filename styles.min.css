@@ -16,3 +16,28 @@ a,button,.btn{touch-action:manipulation}
     transition-duration:.01ms!important
   }
 }
+
+/* Simba image placement */
+.brand-mark.brand-mark-image{
+  width:72px;
+  height:48px;
+  border-radius:8px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+}
+.brand-mark.brand-mark-image img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+@media (max-width:768px){
+  .brand-mark.brand-mark-image{
+    width:58px;
+    height:40px;
+  }
+}
