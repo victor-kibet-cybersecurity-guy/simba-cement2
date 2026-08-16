@@ -333,3 +333,19 @@ footer a:hover{color:var(--amber)}
   }
 }
 
+/* production-mobile-performance-v1 */
+img{max-width:100%;height:auto}
+a,button,.btn{touch-action:manipulation}
+@media(max-width:768px){
+  button,.btn,.menu a,input,select,textarea{min-height:44px}
+  input,select,textarea{font-size:16px}
+  body{overflow-x:hidden}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important
+  }
+}
