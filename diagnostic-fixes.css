@@ -15,7 +15,7 @@
 .u-36261a9ac8{border-radius:12px;overflow:hidden;margin-top:1rem;border:1px solid var(--line);height:380px}
 .u-363cdaa22c{margin-bottom:1rem}
 .u-36f2d3be31{font-size:.9rem;color:var(--ink);margin-bottom:.5rem}
-.u-3812153875{display:flex;flex-direction:column;justify:space-between}
+.u-3812153875{display:flex;flex-direction:column;justify-content:space-between}
 .u-4149da1481{display:flex;gap:.5rem;margin-top:1rem;}
 .u-43a96eeacd{margin-top:1.2rem}
 .u-46f1738295{background:var(--sand);padding:1rem;border-radius:8px;border:1px solid var(--line)}
@@ -39,7 +39,7 @@
 .u-7891572d91{color:var(--ink)}
 .u-7b10bb5f97{text-align:center;margin-top:2rem}
 .u-822533f64d{font-size:.9rem;color:#cbd5e1}
-.u-86843cf1e2{justify-center}
+.u-86843cf1e2{justify-content:center}
 .u-87d3399277{background:var(--sand);padding:1rem;border-radius:8px}
 .u-8e8c2c36e1{font-size:1.05rem;font-weight:700}
 .u-93151082fc{border-radius:var(--r);box-shadow:var(--shadow)}
