@@ -1,0 +1,57 @@
+/* Lightweight layout and loading rules for the blog guide cards. */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 430px;
+}
+
+.blog-card > img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.blog-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.blog-card-body h3 {
+  margin: .45rem 0 .65rem;
+}
+
+.blog-card-body p {
+  margin: 0;
+}
+
+.blog-meta {
+  display: flex;
+  gap: .75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--ink-2);
+  font-size: .85rem;
+}
+
+.blog-read {
+  margin-top: .9rem;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
