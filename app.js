@@ -2,8 +2,7 @@
 
 // Immediate Theme Initialization (prevents flash of wrong theme)
 (function initTheme() {
-  const savedTheme = localStorage.getItem('simba_theme');
-  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.documentElement.setAttribute('data-theme', 'dark');
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
@@ -11,26 +10,6 @@
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Theme Toggle Button Logic
-  const themeToggle = document.getElementById('theme-toggle');
-  if (themeToggle) {
-    const updateThemeState = () => {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-      themeToggle.setAttribute('title', isDark ? 'Switch to light theme' : 'Switch to dark theme');
-    };
-
-    updateThemeState();
-
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('simba_theme', newTheme);
-      updateThemeState();
-    });
-  }
-
   // Mobile Navigation Burger Menu Toggle
   const burger = document.getElementById('burger');
   const menu = document.getElementById('menu');
