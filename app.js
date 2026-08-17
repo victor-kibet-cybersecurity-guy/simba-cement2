@@ -1,11 +1,24 @@
 // Simba Cement Kenya - Core Interactive Scripts
 
-// Immediate Theme Initialization (prevents flash of wrong theme)
-(function initTheme() {
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
+// Automatic system theme sync
+(function initSystemTheme() {
+  const media = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+  const applySystemTheme = () => {
+    const dark = media && media.matches;
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+    document.documentElement.style.colorScheme = dark ? 'dark' : 'light';
+    try { localStorage.removeItem('simba_theme'); } catch (e) {}
+  };
+
+  applySystemTheme();
+
+  if (media) {
+    if (typeof media.addEventListener === 'function') {
+      media.addEventListener('change', applySystemTheme);
+    } else if (typeof media.addListener === 'function') {
+      media.addListener(applySystemTheme);
+    }
   }
 })();
 

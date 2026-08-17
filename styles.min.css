@@ -41,3 +41,25 @@ a,button,.btn{touch-action:manipulation}
     height:40px;
   }
 }
+
+/* Automatic device color adaptation */
+:root {
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+.theme-toggle {
+  display: none !important;
+}
+
