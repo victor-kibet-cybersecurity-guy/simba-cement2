@@ -430,17 +430,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-
-  // Register Service Worker for Offline Capability & Fast Loading
+  // Start the cache early so future mobile visits load from local storage.
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then(reg => {
-          console.log('Simba Cement ServiceWorker registered:', reg.scope);
-        })
-        .catch(err => {
-          console.warn('Simba Cement ServiceWorker registration failed:', err);
-        });
-    });
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
   }
 });
